@@ -11,7 +11,7 @@ function App() {
 
   // Functions
   const getGame = async(searchterm) =>{
-    const response = await fetch(`https://zelda.fanapis.com/api/games?name=${searchterm}`)
+    const response = await fetch(`https://zelda.fanapis.com/api/games?name=The Legend of Zelda: ${searchterm}`)
     const data = await response.json()
 
     setGame(data);
