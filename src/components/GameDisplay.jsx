@@ -1,12 +1,12 @@
-import React from 'react'
-
 function GameDisplay(props) {
   const loaded = () => {
     return (
       <div>
-        <h1>{props.currentGame.name}</h1>
-        <h2>{props.currentGame.developer}</h2>
-        <h2>{props.currentGame.publisher}</h2>
+        <h1>Name: {props.currentGame.Title}</h1>
+        <img src={props.currentGame.Poster}/>
+        <h2>Rated: {props.currentGame.Rated} </h2>
+        <h2>Released: {props.currentGame.Released}</h2>
+        <h2>Runtime: {props.currentGame.Runtime}</h2>
       </div>
     )
   }
@@ -14,7 +14,7 @@ function GameDisplay(props) {
   const loading = () => {
     return <h1>No Title to Display</h1>;
   };
-  return props.game ? loaded() : loading();
+  return props.currentGame ? loaded() : loading();
 };
   // return currentMovie && currentMovie.Title ?
 

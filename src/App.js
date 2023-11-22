@@ -11,20 +11,19 @@ function App() {
 
   // Functions
   const getGame = async(searchterm) =>{
-    const response = await fetch(`https://zelda.fanapis.com/api/games?name=The Legend of Zelda: ${searchterm}`)
-    const data = await response.json()
+    const response = await fetch(`http://www.omdbapi.com/?apikey=8d93c8f5&t=${searchterm}`)
+    const dot = await response.json()
 
-    setGame(data);
-    console.log(data)
+    setGame(dot);
+    console.log(dot)
   }
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>ZELDA &nbsp; API</h1>
-        <p>Here you can look up your favorite Zelda game</p>
-        <p>and get information about it such as its release</p>
-        <p>console, publisher, and release date.</p>
+        <h1>Movie API</h1>
+        <p>Here you can look up your favorite movie and get</p>
+        <p>the info about its release year, ratings, and its run time.</p>
         <Form gamesearch={getGame} />
         <GameDisplay currentGame={game} />
       </header>
