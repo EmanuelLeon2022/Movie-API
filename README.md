@@ -1,12 +1,4 @@
->> ZELDA API:
-https://zelda.fanapis.com/
+>> Movie API:
+https://www.omdbapi.com/
 
->>API Documentation:
-It is free for everyone, and does not require any API keys
-https://docs.zelda.fanapis.com/docs
-
->>Open Tester:
-https://zelda.fanapis.com/api/graphql
-
->> Online Test:
-https://zelda.fanapis.com/api/games?name=Ocarina%20of%20Time
+http://www.omdbapi.com/?apikey=8${APIkey}&t=${searchterm}
