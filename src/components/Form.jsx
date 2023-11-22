@@ -1,9 +1,9 @@
+import React from 'react'
 import { useState } from 'react';
-
 function Form(props) {
 
   const [formData, setFormData]=useState({
-    term: ""
+    searchterm: ""
   });
 
   //handleChange - updates formData when we type into form
@@ -16,7 +16,7 @@ function Form(props) {
     //prevent page from refreshing on form submission
     event.preventDefault();
     //pass the search term to moviesearch prop, which is apps getMovie function
-    props.moviesearch(formData.term);
+    props.gamesearch(formData.searchterm);
   };
 
   return (
@@ -30,3 +30,4 @@ function Form(props) {
 }
 
 export default Form
+
